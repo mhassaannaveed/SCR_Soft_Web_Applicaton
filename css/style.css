@@ -6,9 +6,6 @@
 font-family: 'Poppins';
 
 }
-#login-heading{
-    
-}
 .form-label{
     font-size: 22px;
     font-weight: 300;
@@ -52,4 +49,53 @@ font-family: 'Poppins';
     transform: rotate(155deg);
     margin-top: -1550px;
     margin-left: 470px;
+}
+.slider-img{
+    width: 500px;
+    height: 400px;
+}
+.carousel-text{
+    font-size: 12px;
+}
+#carousel-btn{
+    bottom: -100px;
+}
+.upper-img{
+    top: -100px;
+    position: relative;
+}
+/* .carousel-control-prev{
+    height: 30px;
+    margin-top: 630px;
+    width: 40px;
+    left: 130px;
+} */
+.carouselchange{
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    border: 0.5px solid white;
+}
+.cr{
+    height:8px;
+    width: 8px;
+    border-radius: 50px;
+    
+    border: 0.5px solid white;
+}
+.carousel-indicators [data-bs-target]{
+    height: 8px !important;
+    width: 8px !important;
+    border-radius: 50% !important;
+}
+#arrow-btn{
+   
+    left: 425px;
+    bottom: -80px;
+}
+.xyz{
+    position: relative;
+    bottom: 80px;
 }
