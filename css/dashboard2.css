@@ -80,7 +80,7 @@ input::selection {
     justify-content: end;
 }
 
-.btns-div {
+.content-div {
     border-radius: 20px;
 }
 
@@ -88,15 +88,42 @@ input::selection {
     background: #EBEEF0;
 }
 
-.main-buttons {
-    width: 200px;
-    height: 50px;
-    border-radius: 25px;
-    background-color: #242A80;
-    color: white;
-    font-size: 16px;
-    padding: 0px !important;
+.copyright-text {
+    font-size: 13px;
 }
-.copyright-text{
+
+.details-box {
+    width: 130px;
+    height: 150px;
+    border-radius: 20px;
+    border: 0.5px solid #000000;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+.img1{
+    width: 75px;
+    height: 75px;
+}
+.img2{
+    width: 50px;
+    height: 75px;
+}
+.img3{
+    width: 70px;
+    height: 75px;  
+}
+.img4{
+    width: 75px;
+    height: 75px;
+}
+.img5{
+    width: 75px;
+    height: 75px;
+}
+.img6{
+    width: 50px;
+    height: 75px;
+}
+
+.box-text{
     font-size: 13px;
 }
