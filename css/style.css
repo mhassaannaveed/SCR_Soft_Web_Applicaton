@@ -50,9 +50,13 @@ font-family: 'Poppins';
     margin-top: -1550px;
     margin-left: 470px;
 }
-.slider-img{
+#slider-img1{
     width: 500px;
     height: 400px;
+}
+.slider-img{
+    width: 550px;
+    height: 450px;
 }
 .carousel-text{
     font-size: 12px;
@@ -78,24 +82,22 @@ font-family: 'Poppins';
     color: black;
     border: 0.5px solid white;
 }
-.cr{
+/* .carousel-dot{
     height:8px;
     width: 8px;
     border-radius: 50px;
-    
     border: 0.5px solid white;
-}
+} */
 .carousel-indicators [data-bs-target]{
     height: 8px !important;
     width: 8px !important;
     border-radius: 50% !important;
 }
-#arrow-btn{
-   
+/* #arrow-btn{
     left: 425px;
     bottom: -80px;
-}
+} */
 .xyz{
     position: relative;
-    bottom: 80px;
+    bottom: 70px;
 }
