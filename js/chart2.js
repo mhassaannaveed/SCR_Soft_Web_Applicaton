@@ -1,18 +1,17 @@
 const cto = document.getElementById('doughnutChart');
-
 const data = {
     labels: [
-        'Red',
-        'Blue',
-        'Yellow'
+        'Sales',
+        'Completed',
+        'Pending'
     ],
     datasets: [{
         label: 'My First Dataset',
-        data: [400, 50, 100],
+        data: [70, 25, 5],
         backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)'
+            'rgba(46, 78, 165, 1)',
+            'rgba(249, 199, 79, 1)',
+            'rgba(144, 190, 109, 1)'
         ],
         hoverOffset: 4
     }]

@@ -1,11 +1,11 @@
-const ctx = document.getElementById('barChart');
+const ctx = document.getElementById('lineChart1');
 
-const barChart = new Chart(ctx, {
-  type: 'bar',
+const lineChart1 = new Chart(ctx, {
+  type: 'line',
   data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: ['July', 'July', 'July', 'July', 'July', 'July'],
     datasets: [{
-      label: '# of Votes',
+      label: 'current week',
       data: [12, 19, 3, 5, 2, 3],
       borderWidth: 1
     }]
