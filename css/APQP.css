@@ -126,3 +126,19 @@ a {
 .inner-component {
     border-left: 5px solid rgba(36, 42, 128, 1);
 }
+
+.table-div{
+    border-radius:10px, 10px, 0px, 0px;
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.table-headings{
+   background-color:  rgba(37, 52, 111, 1);
+   color: white;
+
+}
+.table>:not(caption)>*>*{
+    padding: 1.5rem 0.5rem !important;
+    font-weight: 400;
+}
