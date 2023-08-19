@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
@@ -71,7 +70,7 @@ a {
     border-radius: 30px;
     color: linear-gradient(0deg, #25346F, #25346F),
         linear-gradient(0deg, #FFFFFF, #FFFFFF);
-    border: 0.5px solid rgba(37, 52, 111, 1);    
+    border: 0.5px solid rgba(37, 52, 111, 1);
 
 }
 
@@ -109,10 +108,6 @@ a {
         linear-gradient(0deg, #FFFFFF, #FFFFFF);
 }
 
-.input-divs {
-    margin-left: 12rem;
-}
-
 .components {
     width: 200px;
     height: 100px;
@@ -127,18 +122,47 @@ a {
     border-left: 5px solid rgba(36, 42, 128, 1);
 }
 
-.table-div{
-    border-radius:10px, 10px, 0px, 0px;
+.table-div {
+    border-radius: 10px, 10px, 0px, 0px;
     height: 60vh;
     overflow-y: scroll;
 }
 
-.table-headings{
-   background-color:  rgba(37, 52, 111, 1);
-   color: white;
-
+.table-headings {
+    background-color: rgba(37, 52, 111, 1);
+    color: white;
 }
-.table>:not(caption)>*>*{
+
+.table>:not(caption)>*>* {
     padding: 1.5rem 0.5rem !important;
     font-weight: 400;
+}
+
+.select-div {
+    width: 75px;
+}
+
+select {
+    border-radius: 25px !important;
+    background-color: rgba(217, 217, 217, 1) !important;
+    color: black !important;
+}
+
+.middle-div {
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.application-input {
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 40px;
+}
+
+.app-btns {
+    background-color: rgba(239, 240, 240, 0.58);
+}
+
+.btn-div {
+    height: 95vh;
+    overflow-y: scroll;
 }
