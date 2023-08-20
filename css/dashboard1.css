@@ -45,13 +45,6 @@ a {
     border-radius: 15px;
 }
 
-input::selection {
-    border-color: transparent;
-    /* You can use 'none' as well */
-    box-shadow: none;
-    /* Optionally remove any focus box-shadow */
-}
-
 .input-box {
     width: 260px;
     border-radius: 15px;
@@ -97,6 +90,17 @@ input::selection {
     font-size: 16px;
     padding: 0px !important;
 }
-.copyright-text{
+
+.copyright-text {
     font-size: 13px;
+}
+
+.form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-switch .form-check-input {
+    background-color: rgba(217, 217, 217, 1) !important;
 }

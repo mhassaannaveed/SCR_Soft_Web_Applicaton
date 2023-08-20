@@ -160,9 +160,16 @@ select {
 
 .app-btns {
     background-color: rgba(239, 240, 240, 0.58);
+    width: 250px;
+    height: 45px;
 }
 
 .btn-div {
     height: 95vh;
     overflow-y: scroll;
+}
+input:focus {
+    border-color: transparent; 
+    box-shadow: none; 
+    outline: none; 
 }

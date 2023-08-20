@@ -161,3 +161,11 @@ input::selection {
     width: 850px;
     height: 250px;
 }
+.form-control:focus {
+    border-color: transparent; 
+    box-shadow: none; 
+    outline: none; 
+}
+.form-switch .form-check-input {
+    background-color: rgba(217, 217, 217, 1) !important;
+}
