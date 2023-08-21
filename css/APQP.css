@@ -173,3 +173,17 @@ input:focus {
     box-shadow: none; 
     outline: none; 
 }
+
+/* Add this CSS to your existing APQP.css file */
+.middle-div {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initial position, outside of the viewport */
+    transition: left 0.3s ease-in-out; /* Transition for smooth sliding */
+    /* ... (your other styles) */
+}
+
+.middle-div.active {
+    position: static;
+    /* left: 0; Move to the visible area of the viewport */
+}
