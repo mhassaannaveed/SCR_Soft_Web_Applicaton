@@ -168,7 +168,6 @@ input::selection {
   margin-bottom: 1.3rem;
 }
 
-<<<<<<< HEAD
 #chart3 {
     width: 850px;
     height: 250px;
@@ -181,7 +180,6 @@ input::selection {
 .form-switch .form-check-input {
     background-color: rgba(217, 217, 217, 1) !important;
 }
-=======
 .legend {
   display: flex;
   flex-direction: column;
@@ -223,4 +221,3 @@ input::selection {
   gap: 20px;
   margin: auto 0;
 }
->>>>>>> f8abfc082a697c1ea5574d9c017561f7c69a2ffa
