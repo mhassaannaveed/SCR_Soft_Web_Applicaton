@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>new navbar1</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/dashboard1.css">
@@ -14,7 +14,7 @@
 <body>
     <div class="d-flex">
         <div id="left-side">
-            <div class="bg-white mt-3 mx-2">
+            <div class="bg-white mt-3 mx-2 d-none d-lg-block">
                 <div class="border-bottom border-2 mx-2 ">
                     <img src="/img/SCRQMS.png" alt="">
                 </div>
@@ -22,7 +22,7 @@
                     <p id="scr-text" class="mt-1  text-center fw-bold">The Product of Scrsoft</p>
                 </div>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-lg-flex justify-content-center d-none">
                 <div class="my-4">
                     <a href="">
                         <div class="dashboard-btn d-flex justify-content-center p-2 mx-4">
@@ -47,30 +47,29 @@
                         </a>
                     </div>
                     <div class="mt-4">
-                        <a href="" class="">
+                        <button class="btn text-center ms-2" onclick="start()">
                             <div class="d-flex justify-content-center">
                                 <img src="/img/application.png" alt="">
                             </div>
                             <p class="btn-text text-center mt-1">Application</p>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
-
         </div>
-        <div id="right-side" class="w-100">
-            <nav class="navbar navbar-expand-lg navbar-white bg-white">
-                <div class="container-fluid">
-                    <div>
-                        <a class="navbar-brand ms-4 text-dark" href="#">Dashboard</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
 
-                    <div class="collapse navbar-collapse me-4" id="navbarSupportedContent">
+        <div id="right-side" class="w-100">
+            <nav class="navbar navbar-expand-lg bg-white">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between w-100">
+                        <a class="navbar-brand ms-4 text-dark" href="#">Dashboard</a>
+
+                        <button class="navbar-toggler" id="toggleButton">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                          </button>
+                    </div>
+                    <div class="d-lg-flex d-none">
                         <form class="d-flex input-box  align-items-center pt-2 ps-2">
                             <a href="">
                                 <img src="/img/search.png" alt="">
@@ -78,8 +77,7 @@
                             <input class="form-control border-0 me-2" type="search" placeholder="" aria-label="Search">
                         </form>
                         <div class="form-check form-switch ms-4">
-                            <input class="form-check-input switch-btn" type="checkbox"
-                                id="flexSwitchCheckDefault">
+                            <input class="form-check-input switch-btn" type="checkbox" id="flexSwitchCheckDefault">
                         </div>
                         <div class="d-flex bell-btn justify-content-center align-items-center ms-4">
                             <a href="">
@@ -101,99 +99,221 @@
                     </div>
                 </div>
             </nav>
-            <div class="bg-white my-4 mx-3 btns-div">
-                <div class="container d-flex justify-content-center">
+            <div class="d-lg-none">
+                <div class="overlay" id="overlay"></div>
+                <div class="togglenavbar d-lg-none" id="togglenavbar">
+                    <div class="mx-5 py-4 d-flex justify-content-center">
+                        <img src="/img/logo.png" class="logoimage" alt="">
+                    </div>
+                    <div>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/dashboard.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Dashboard</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/calender.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Calendar</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/lightbell.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Activity</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3" id="openMiddleDivBtn"
+                            onclick="start()">
+                            <img src="/img/fillapp.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Applications</p>
+                        </button>
+                        <div class="form-check form-switch d-flex align-items-center m-3">
+                            <input class="form-check-input switch-btn" type="checkbox" id="flexSwitchCheckDefault">
+                            <p class="ms-3 mb-0 text-white">Classic</p>
+                        </div>
+                        <div class="form-check form-switch d-flex align-items-center m-3 pb-5">
+                            <input class="form-check-input switch-btn " type="checkbox" id="flexSwitchCheckDefault">
+                            <p class="ms-4 mb-0 text-white ">Advanced</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="d-flex">
+                <div class="middle-div bg-white  d-lg-inline">
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="mx-5 fw-bold d-flex align-items-center">
+                            <h5 class="mb-0">Application</h5>
+                        </div>
+                        <div class="ms">
+                            <button class="btn" onclick="end()">
+                                <img src="/img/cross.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="application-input d-flex align-items-center mt-3 mx-2">
+                        <a href="" class="ms-2">
+                            <img src="/img/search2.png" alt="">
+                        </a>
+                        <input type="search" placeholder="Search" class="border-0 ms-2 w-100">
+                    </div>
+                    <div class="btn-div mt-4 d-grid" id="btnsDiv">
+                        <button class="btn app-btns py-2 text-center ">
+                            APQP
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            PPAP
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            FMEA
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            SPC
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            MAS
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Cost of Quality
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Document Control
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Asset Management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Audit Management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Calibration Software
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Management Review
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Customer Complaints
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Maintenance Software
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Supplier Management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Training management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Project management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Incidents Management
+                        </button>
+                    </div>
+                </div>
+
+
+
+
+<!-- "DOnt touch"                 -->
+                <div class="bg-white my-4 mx-3 btns-div d-flex justify-content-center w-100">
                     <div class="my-5">
-                        <div class="d-flex">
-                            <button class="btn btn-primary main-buttons mx-3">
+                        <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 APQP
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 PPAP
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 FMEA
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 MSA
                             </button>
                         </div>
-                        <div class="d-flex mt-5">
-                            <button class="btn btn-primary main-buttons mx-3">
+                        <div class="d-flex mt-1 mt-lg-5 flex-wrap flex-lg-nowrap justify-content-center">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 SPC
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Quicksol
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Cost of Quality
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Document Control
                             </button>
                         </div>
-                        <div class="d-flex mt-5">
-                            <button class="btn btn-primary main-buttons mx-3">
+                        <div class="d-flex mt-1 mt-lg-5 flex-wrap flex-lg-nowrap justify-content-center">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Asset Management
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Audit Management
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Management Review
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Customer Complaints
                             </button>
                         </div>
-                        <div class="d-flex mt-5">
-                            <button class="btn btn-primary main-buttons mx-3">
+                        <div class="d-flex mt-1 mt-lg-5 flex-wrap flex-lg-nowrap justify-content-center">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Calibration Software
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Supplier Management
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Training Management
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Maintenance Software
                             </button>
                         </div>
-                        <div class="d-flex mt-5">
-                            <button class="btn btn-primary main-buttons mx-3">
+                        <div class="d-flex mt-1 mt-lg-5 flex-wrap flex-lg-nowrap justify-content-center">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Project management
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Warehouse
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Work Permits
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Legal Compliance
                             </button>
                         </div>
-                        <div class="d-flex mt-5">
-                            <button class="btn btn-primary main-buttons mx-3">
+                        <div class="d-flex mt-1 mt-lg-5 flex-wrap flex-lg-nowrap justify-content-center">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Incident management
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Inventory management
                             </button>
-                            <button class="btn btn-primary main-buttons mx-3">
+                            <button class="btn btn-primary main-buttons mx-1 mx-lg-3 mt-3 mt-lg-0">
                                 Warranty management
                             </button>
                         </div>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <div class="d-flex justify-content-center align-items-center">
-            <p class="text- mb-2  copyright-text">© 2023 SCR Soft Technologies (P) Ltd, All Rights Reserved</p>
-        </div>
+                <p class="text- mb-2  copyright-text">© 2023 SCR Soft Technologies (P) Ltd, All Rights Reserved
+                </p>
+            </div>
         </div>
     </div>
 
+    </div>
+
+
+    <script src="/js/main.js"></script>
+    <script src="/js/all.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
