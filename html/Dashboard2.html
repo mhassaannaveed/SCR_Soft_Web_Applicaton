@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <div s class="d-flex">
+    <div class="d-flex">
         <div id="left-side">
-            <div class="bg-white mt-3 mx-2">
+            <div class="bg-white mt-3 mx-2 d-none d-lg-block">
                 <div class="border-bottom border-2 mx-2 ">
                     <img src="/img/SCRQMS.png" alt="">
                 </div>
@@ -22,7 +22,7 @@
                     <p id="scr-text" class="mt-1  text-center fw-bold">The Product of Scrsoft</p>
                 </div>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-lg-flex justify-content-center d-none">
                 <div class="my-4">
                     <a href="">
                         <div class="dashboard-btn d-flex justify-content-center p-2 mx-4">
@@ -47,39 +47,37 @@
                         </a>
                     </div>
                     <div class="mt-4">
-                        <a href="" class="">
+                        <button class="btn text-center ms-2" onclick="start()">
                             <div class="d-flex justify-content-center">
                                 <img src="/img/application.png" alt="">
                             </div>
                             <p class="btn-text text-center mt-1">Application</p>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
-
         </div>
+
         <div id="right-side" class="w-100">
-            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+            <nav class="navbar navbar-expand-lg bg-white">
                 <div class="container-fluid">
-                    <div>
+                    <div class="d-flex justify-content-between w-100">
                         <a class="navbar-brand ms-4 text-dark" href="#">Dashboard</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+
+                        <button class="navbar-toggler" id="toggleButton">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
                         </button>
                     </div>
-
-                    <div class="collapse navbar-collapse me-4" id="navbarSupportedContent">
+                    <div class="d-lg-flex d-none">
                         <form class="d-flex input-box  align-items-center pt-2 ps-2">
                             <a href="">
                                 <img src="/img/search.png" alt="">
                             </a>
                             <input class="form-control border-0 me-2" type="search" placeholder="" aria-label="Search">
                         </form>
-                        <div class="form-check form-switch ms-4 ">
-                            <input class="form-check-input switch-btn bg-light " type="checkbox"
-                                id="flexSwitchCheckDefault">
+                        <div class="form-check form-switch ms-4">
+                            <input class="form-check-input switch-btn" type="checkbox" id="flexSwitchCheckDefault">
                         </div>
                         <div class="d-flex bell-btn justify-content-center align-items-center ms-4">
                             <a href="">
@@ -101,151 +99,269 @@
                     </div>
                 </div>
             </nav>
-            <div class="bg-white my-4 content-div">
-                <div class="container">
-                    <div>
-                        <div class="d-flex justify-content-evenly">
-                            <div class="details-box mt-4">
-                                <div class="d-flex justify-content-center align-items-center mt-3">
-                                    <img src="/img/clients.png" class="img-fluid img1" alt="">
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 box-text">No of Clients</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 fw-bold">200</p>
-                                </div>
-                            </div>
-                            <div class="details-box mt-4">
-                                <div class="d-flex justify-content-center align-items-center mt-3">
-                                    <img src="/img/tick.png" class="img-fluid img2" alt="">
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 box-text">Total Sales</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 fw-bold">5,5508</p>
-                                </div>
-                            </div>
-                            <div class="details-box mt-4">
-                                <div class="d-flex justify-content-center align-items-center mt-3">
-                                    <img src="/img/cart.png" class="img-fluid img3" alt="">
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 box-text">Total Orders</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 fw-bold">150</p>
-                                </div>
-                            </div>
-                            <div class="details-box mt-4">
-                                <div class="d-flex justify-content-center align-items-center mt-3">
-                                    <img src="/img/loading.png" class="img-fluid img4" alt="">
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 box-text">Pendings</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 fw-bold">50</p>
-                                </div>
-                            </div>
-                            <div class="details-box mt-4">
-                                <div class="d-flex justify-content-center align-items-center mt-3">
-                                    <img src="/img/visitors.png" class="img-fluid img5" alt="">
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 box-text">Total Visitors</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 fw-bold">223</p>
-                                </div>
-                            </div>
-                            <div class="details-box mt-4">
-                                <div class="d-flex justify-content-center align-items-center mt-3">
-                                    <img src="/img/dollar.png" class="img-fluid img6" alt="">
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 box-text">Total Revenue</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <p class="mb-0 fw-bold">2,50289</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between gap-4 mx-5">
-                        <div id="chart1" class="mt-5 ms-4">
-                            <div class="d-flex profile-heading justify-content-between">
-                                <div class="mx-4 d-flex align-items-center my-2">
-                                    <p class="mb-0 ms-2">Revenue</p>
-                                </div>
-                                <div class="d-flex align-items-center me-4 my-2">
-                                    <p class="mb-0 mx-1">Days</p>
-                                    <p class="mb-0 mx-1">Week</p>
-                                    <p class="mb-0 mx-1">Month</p>
-                                </div>
-                            </div>
-                            <div class="lineChart1">
-                                <canvas id="lineChart1" height="250" width="650"></canvas>
-                            </div>
-                        </div>
-                        <div id="chart2" class="mt-5 me-4">
-                            <div class="mt-2 mx-4 profile-heading">
-                                <p class="mb-0 ms-4">Profit</p>
-                            </div>
-                            <div class="chart-container">
-                            <div class="doughnutChart">
-                                <canvas id="doughnutChart"></canvas>
-                            </div>
-                            <div class="legend">
-                                <div class="legend-item">
-                                    <div class="legend-circle sales"></div>
-                                    <div class="legend-label">Sales</div>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-circle completed"></div>
-                                    <div class="legend-label">Completed</div>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-circle pending"></div>
-                                    <div class="legend-label">Pending</div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="chart3-container">
-                    <div class="ms-3"   id="" >
-                        <div class="mt-5 ms-5">
-                            <div class="d-flex production-heading justify-content-between">
-                                <div class="mx-4 d-flex align-items-center my-2">
-                                    <p class="mb-0 ms-2">Part Production</p>
-                                </div>
-                            </div>
-                            <div class="lineChart2">
-                                <canvas id="lineChart2" height="200" width="750"></canvas>
-                            </div>
-                        </div>
+            <div class="d-lg-none">
+                <div class="overlay" id="overlay"></div>
+                <div class="togglenavbar d-lg-none" id="togglenavbar">
+                    <div class="mx-5 py-4 d-flex justify-content-center">
+                        <img src="/img/logo.png" class="logoimage" alt="">
                     </div>
                     <div>
-                        <div class="legend-item">
-                            <div class="legend-circle production"></div>
-                            <div class="legend-label">Production</div>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/dashboard.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Dashboard</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/calender.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Calendar</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/lightbell.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Activity</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3" id="openMiddleDivBtn"
+                            onclick="start()">
+                            <img src="/img/fillapp.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Applications</p>
+                        </button>
+                        <div class="form-check form-switch d-flex align-items-center m-3">
+                            <input class="form-check-input switch-btn" type="checkbox" id="flexSwitchCheckDefault">
+                            <p class="ms-3 mb-0 text-white">Classic</p>
+                        </div>
+                        <div class="form-check form-switch d-flex align-items-center m-3 pb-5">
+                            <input class="form-check-input switch-btn " type="checkbox" id="flexSwitchCheckDefault">
+                            <p class="ms-4 mb-0 text-white ">Advanced</p>
                         </div>
                     </div>
-                    </div>
-
                 </div>
             </div>
-        </div>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
-        <script src="/js/chart1.js"></script>
-        <script src="/js/chart2.js"></script>
-        <script src="/js/chart3.js"></script>
+            <div>
+                <div class="middle-div bg-white  d-lg-inline">
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="mx-5 fw-bold d-flex align-items-center">
+                            <h5 class="mb-0">Application</h5>
+                        </div>
+                        <div class="ms">
+                            <button class="btn" onclick="end()">
+                                <img src="/img/cross.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="application-input d-flex align-items-center mt-3 mx-2">
+                        <a href="" class="ms-2">
+                            <img src="/img/search2.png" alt="">
+                        </a>
+                        <input type="search" placeholder="Search" class="border-0 ms-2 w-100">
+                    </div>
+                    <div class="btn-div mt-4 d-grid" id="btnsDiv">
+                        <button class="btn app-btns py-2 text-center ">
+                            APQP
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            PPAP
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            FMEA
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            SPC
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            MAS
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Cost of Quality
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Document Control
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Asset Management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Audit Management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Calibration Software
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Management Review
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Customer Complaints
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Maintenance Software
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Supplier Management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Training management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Project management
+                        </button>
+                        <button class="btn app-btns py-2 text-center mt-1 ">
+                            Incidents Management
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- "Dont touch"-->
+                <div class="bg-white my-4 mx-3 content-div">
+                    <div class="container">
+                        <div>
+                            <div class="d-flex justify-content-evenly">
+                                <div class="details-box mt-4">
+                                    <div class="d-flex justify-content-center align-items-center mt-3">
+                                        <img src="/img/clients.png" class="img-fluid img1" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 box-text">No of Clients</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 fw-bold">200</p>
+                                    </div>
+                                </div>
+                                <div class="details-box mt-4">
+                                    <div class="d-flex justify-content-center align-items-center mt-3">
+                                        <img src="/img/tick.png" class="img-fluid img2" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 box-text">Total Sales</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 fw-bold">5,5508</p>
+                                    </div>
+                                </div>
+                                <div class="details-box mt-4">
+                                    <div class="d-flex justify-content-center align-items-center mt-3">
+                                        <img src="/img/cart.png" class="img-fluid img3" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 box-text">Total Orders</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 fw-bold">150</p>
+                                    </div>
+                                </div>
+                                <div class="details-box mt-4">
+                                    <div class="d-flex justify-content-center align-items-center mt-3">
+                                        <img src="/img/loading.png" class="img-fluid img4" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 box-text">Pendings</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 fw-bold">50</p>
+                                    </div>
+                                </div>
+                                <div class="details-box mt-4">
+                                    <div class="d-flex justify-content-center align-items-center mt-3">
+                                        <img src="/img/visitors.png" class="img-fluid img5" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 box-text">Total Visitors</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 fw-bold">223</p>
+                                    </div>
+                                </div>
+                                <div class="details-box mt-4">
+                                    <div class="d-flex justify-content-center align-items-center mt-3">
+                                        <img src="/img/dollar.png" class="img-fluid img6" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 box-text">Total Revenue</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="mb-0 fw-bold">2,50289</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between gap-4 mx-5">
+                            <div id="chart1" class="mt-5 ms-4">
+                                <div class="d-flex profile-heading justify-content-between">
+                                    <div class="mx-4 d-flex align-items-center my-2">
+                                        <p class="mb-0 ms-2">Revenue</p>
+                                    </div>
+                                    <div class="d-flex align-items-center me-4 my-2">
+                                        <p class="mb-0 mx-1">Days</p>
+                                        <p class="mb-0 mx-1">Week</p>
+                                        <p class="mb-0 mx-1">Month</p>
+                                    </div>
+                                </div>
+                                <div class="lineChart1">
+                                    <canvas id="lineChart1" height="250" width="650"></canvas>
+                                </div>
+                            </div>
+                            <div id="chart2" class="mt-5 me-4">
+                                <div class="mt-2 mx-4 profile-heading">
+                                    <p class="mb-0 ms-4">Profit</p>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="doughnutChart">
+                                        <canvas id="doughnutChart"></canvas>
+                                    </div>
+                                    <div class="legend">
+                                        <div class="legend-item">
+                                            <div class="legend-circle sales"></div>
+                                            <div class="legend-label">Sales</div>
+                                        </div>
+                                        <div class="legend-item">
+                                            <div class="legend-circle completed"></div>
+                                            <div class="legend-label">Completed</div>
+                                        </div>
+                                        <div class="legend-item">
+                                            <div class="legend-circle pending"></div>
+                                            <div class="legend-label">Pending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart3-container">
+                            <div class="ms-3" id="">
+                                <div class="mt-5 ms-5">
+                                    <div class="d-flex production-heading justify-content-between">
+                                        <div class="mx-4 d-flex align-items-center my-2">
+                                            <p class="mb-0 ms-2">Part Production</p>
+                                        </div>
+                                    </div>
+                                    <div class="lineChart2">
+                                        <canvas id="lineChart2" height="200" width="750"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="legend-item">
+                                    <div class="legend-circle production"></div>
+                                    <div class="legend-label">Production</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="text- mb-2  copyright-text">© 2023 SCR Soft Technologies (P) Ltd, All Rights Reserved
+                    </p>
+                </div>
+            </div>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+            <script src="/js/chart1.js"></script>
+            <script src="/js/chart2.js"></script>
+            <script src="/js/chart3.js"></script>
+            <script src="/js/all.js"></script>
+            <script src="/js/bootstrap.bundle.js"></script>
+            <script src="/js/main.js"></script>
 </body>
 
 </html>

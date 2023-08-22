@@ -43,13 +43,6 @@ a {
   border-radius: 15px;
 }
 
-input::selection {
-  border-color: transparent;
-  /* You can use 'none' as well */
-  box-shadow: none;
-  /* Optionally remove any focus box-shadow */
-}
-
 .input-box {
   width: 260px;
   border-radius: 15px;
@@ -71,19 +64,16 @@ input::selection {
 
 .admin-heading {
   font-size: 20px;
-}
-
-.navbar-collapse {
-  display: flex;
-  justify-content: end;
-}
-
-.content-div {
-  border-radius: 20px;
+  width: 130px;
 }
 
 #right-side {
   background: #ebeef0;
+}
+
+
+.content-div {
+  border-radius: 20px;
 }
 
 .copyright-text {
@@ -138,6 +128,7 @@ input::selection {
   border: 0.5px solid #000000;
   border-radius: 20px;
 }
+
 #chart3 {
   width: 850px;
   height: 600px;
@@ -151,6 +142,7 @@ input::selection {
   border: 0.5px solid #000000;
   border-radius: 20px;
 }
+
 .chart3-container {
   display: flex;
   align-items: center;
@@ -169,17 +161,20 @@ input::selection {
 }
 
 #chart3 {
-    width: 850px;
-    height: 250px;
+  width: 850px;
+  height: 250px;
 }
+
 .form-control:focus {
-    border-color: transparent; 
-    box-shadow: none; 
-    outline: none; 
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
 }
+
 .form-switch .form-check-input {
-    background-color: rgba(217, 217, 217, 1) !important;
+  background-color: rgba(217, 217, 217, 1) !important;
 }
+
 .legend {
   display: flex;
   flex-direction: column;
@@ -210,9 +205,11 @@ input::selection {
 .pending {
   background-color: rgba(144, 190, 109, 1);
 }
+
 .production {
   background-color: rgba(46, 78, 165, 1);
 }
+
 .chart-container {
   display: flex;
   align-items: center;
@@ -220,4 +217,124 @@ input::selection {
   padding: 1rem;
   gap: 20px;
   margin: auto 0;
+}
+
+.logoimage {
+  width: 150px;
+  height: 75px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.togglenavbar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  /* Start off-screen */
+  width: 300px;
+  height: 100%;
+  background-color: #0a3546;
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.application-input {
+  border-radius: 10px;
+  border: 2px solid black;
+  height: 40px;
+}
+
+.app-btns {
+  background-color: rgba(239, 240, 240, 0.58);
+  width: 250px;
+  height: 45px;
+}
+
+.btn-div {
+  height: 95vh;
+  overflow-y: scroll;
+}
+
+input:focus {
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.middle-div {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: left 0.3s ease-in-out;
+}
+
+.middle-div.active {
+  position: fixed;
+  top: 0;
+  left: 0%;
+}
+
+.logoimage {
+  width: 150px;
+  height: 75px;
+}
+
+.togglenavbar {
+  background-color: #0a3546;
+}
+
+.navbarbtn {
+  background-color: #0a3546;
+}
+
+.form-switch .form-check-input {
+  height: 30px;
+  width: 86px;
+}
+
+.navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  gap: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+
+  z-index: 5000;
+}
+
+.line {
+  width: 24px;
+  height: 4px;
+  background-color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler.open .line1 {
+  transform: rotate(45deg) translate(3px, 4px);
+}
+
+.navbar-toggler.open .line2 {
+  transform: rotate(-45deg) translate(3px, -4px);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: none;
 }

@@ -14,7 +14,7 @@
 <body>
     <div class="d-flex">
         <div id="left-side">
-            <div class="bg-white mt-3 mx-2">
+            <div class="bg-white mt-3 mx-2 d-none d-lg-block">
                 <div class="border-bottom border-2 mx-2 ">
                     <img src="/img/SCRQMS.png" alt="">
                 </div>
@@ -22,7 +22,7 @@
                     <p id="scr-text" class="mt-1  text-center fw-bold">The Product of Scrsoft</p>
                 </div>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-lg-flex justify-content-center d-none">
                 <div class="my-4">
                     <a href="">
                         <div class="dashboard-btn d-flex justify-content-center p-2 mx-4">
@@ -73,23 +73,20 @@
                 </div>
             </div>
         </div>
+
         <div id="right-side" class="w-100">
-            <nav class="navbar navbar-expand-lg navbar-white bg-white">
-                <div class="container-fluid d-flex">
-                    <div>
+            <nav class="navbar navbar-expand-lg bg-white">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between w-100">
                         <a class="navbar-brand ms-4 text-dark" href="#">APQP</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+
+                        <button class="navbar-toggler" id="toggleButton">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse me-4" id="navbarSupportedContent">
-                        <div class="d-flex bell-btn justify-content-center align-items-center ms-4">
-                            <a href="">
-                                <img src="/img/darkbell.png" alt="">
-                            </a>
-                        </div>
+                    <div class="d-lg-flex d-none">
+
                         <div class="d-flex justify-content-center align-items-center ms-5">
                             <div>
                                 <p class="admin-heading mb-0">Hello, Admin</p>
@@ -105,14 +102,53 @@
                     </div>
                 </div>
             </nav>
+            <div class="d-lg-none">
+                <div class="overlay" id="overlay"></div>
+                <div class="togglenavbar d-lg-none" id="togglenavbar">
+                    <div class="mx-5 py-4 d-flex justify-content-center">
+                        <img src="/img/logo.png" class="logoimage" alt="">
+                    </div>
+                    <div>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/dashboard.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Dashboard</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/master.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Master</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/pre.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Pre APQP</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/form.png" alt="">
+                            <p class="ms-3 mb-0 text-white">APQP Form</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3">
+                            <img src="/img/standard.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Standard Procedure</p>
+                        </button>
+                        <button class="btn navbarbtn d-flex align-items-center m-3 id=" openMiddleDivBtn"
+                            onclick="start()"">
+                                <img src=" /img/application.png" alt="">
+                            <p class="ms-3 mb-0 text-white">Application</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
             <div class="d-flex">
-                <div class="middle-div bg-white ">
+                <div class="middle-div bg-white  d-lg-inline">
                     <div class="d-flex align-items-center mt-3">
-                        <div class="mx-5 fw-bold">
-                            <h5>Application</h5>
+                        <div class="mx-5 fw-bold d-flex align-items-center">
+                            <h5 class="mb-0">Application</h5>
                         </div>
                         <div class="ms">
-                            <button class="btn" onclick="close()">
+                            <button class="btn" onclick="end()">
                                 <img src="/img/cross.png" alt="">
                             </button>
                         </div>
@@ -177,6 +213,8 @@
                         </button>
                     </div>
                 </div>
+
+
                 <div class="w-100">
                     <div class="ms-3 mt-3">
                         <h5>Dashboard</h5>
@@ -421,7 +459,8 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center mx-4">
-                            <a href="" class="text-dark mx-1 fw-bold"><</a>
+                            <a href="" class="text-dark mx-1 fw-bold">
+                                < </a>
                                     <a href="" class="text-dark mx-1">1</a>
                                     <a href="" class="text-dark mx-1">2</a>
                                     <a href="" class="text-dark mx-1">3</a>
@@ -433,7 +472,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -441,5 +479,9 @@
 
 
     <script src="/js/main.js"></script>
+    <script src="/js/all.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+
 </body>
+
 </html>
