@@ -188,7 +188,7 @@ input:focus {
 }
 
 .navbar-toggler {
-  display: none; /* Hide by default */
+  display: none;
 }
 
 @media (max-width: 768px) {
