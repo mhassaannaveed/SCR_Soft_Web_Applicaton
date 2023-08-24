@@ -19,6 +19,7 @@ const lineChart2 = new Chart(ctr, {
     ],
   },
   options: {
+    responsive: true,
     tension: 0.5,
     plugins: {
       legend: {
