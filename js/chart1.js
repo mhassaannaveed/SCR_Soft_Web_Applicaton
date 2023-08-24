@@ -20,6 +20,7 @@ const lineChart1 = new Chart(ctx, {
     ],
   },
   options: {
+    maintainAspectRatio: false,
     scales: {
       x: {
         beginAtZero: true,
