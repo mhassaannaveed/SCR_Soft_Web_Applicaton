@@ -3,8 +3,13 @@ const togglenavbar = document.getElementById("togglenavbar");
 const middleDiv = document.querySelector(".middle-div");
 const toggleButton = document.querySelector(".navbar-toggler");
 
-<<<<<<< HEAD
-=======
+function updateToggleButtonDisplay() {
+  if (window.innerWidth > 768) {
+    toggleButton.style.display = "none";
+  } else {
+    toggleButton.style.display = "flex";
+  }
+}
 let isNavbarOpen = false;
 
 function updateToggleButtonDisplay() {
@@ -21,19 +26,25 @@ function updateToggleButtonDisplay() {
   }
 }
 
->>>>>>> 13ea2c9ebe59cabfe0f64c073e642884a1d77c4d
+
 let start = () => {
   middleDiv.classList.add("active");
-  togglenavbar.style.left = "-300px";
-  overlay.style.display = "none";
-  toggleButton.style.display = "none";
+
+  if (window.innerWidth <= 768) {
+    togglenavbar.style.left = "-300px";
+    overlay.style.display = "none";
+    toggleButton.style.display = "none";
+  }
 };
 
 let end = () => {
   middleDiv.classList.remove("active");
-  togglenavbar.style.left = "0";
-  overlay.style.display = "block";
-  toggleButton.style.display = "flex";
+
+  if (window.innerWidth <= 768) {
+    togglenavbar.style.left = "0";
+    overlay.style.display = "block";
+    toggleButton.style.display = "flex";
+  }
 };
 
 toggleButton.addEventListener("click", () => {
@@ -53,15 +64,17 @@ toggleButton.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
   togglenavbar.style.left = "-300px";
   overlay.style.display = "none";
+  toggleButton.classList.remove("open");
 });
 
-<<<<<<< HEAD
+
 $(document).ready(function () {
+  updateToggleButtonDisplay();
   $("#openMiddleDivBtn").click(function () {
     $(".middle-div").toggleClass("active");
   });
 });
-=======
+
 window.addEventListener(
   "resize",
   function () {
@@ -77,4 +90,4 @@ window.addEventListener(
   },
   true
 );
->>>>>>> 13ea2c9ebe59cabfe0f64c073e642884a1d77c4d
+
